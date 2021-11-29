@@ -29,7 +29,7 @@ export default {
   methods: {
     loadData() {
       fetchPokeData(this.pokemonId).then((data) => {
-        this.pokeName = data.name;
+        this.pokeName = "No. " + this.pokemonId + ": " + data.name;
         this.sprite = data.sprite;
       });
     }
@@ -53,7 +53,7 @@ export default {
 }
 
 img {
-  width: 30%;
+  height: 80%;
   image-rendering: pixelated;
 }
 </style>
