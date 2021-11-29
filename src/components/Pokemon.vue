@@ -21,9 +21,9 @@ export default {
   },
   props: {
     pokemonId: {
-      type: Number,
-      default: 1,
-      validator: v => { return (v >= 1) && (v <= 151); }
+      type: String,
+      default: "1",
+      validator: v => { return (parseInt(v) >= 1) && (parseInt(v) <= 151); }
     }
   },
   methods: {
@@ -44,15 +44,16 @@ export default {
 
 <style scoped>
 .pokemon {
+  width: 100%;
+  height: 100%;
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 img {
-  width: 35%;
+  width: 30%;
   image-rendering: pixelated;
 }
 </style>
